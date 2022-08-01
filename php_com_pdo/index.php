@@ -3,15 +3,35 @@
 try{
     $db = new PDO("mysql:server=localhost ; dbname=php_com_dbo", "root", "");
 
-    // $query = '
-    
-    //     insert into tb_usuarios values ("Henrique","admin@teste.com.br","12345")
 
+    //TRABALHANDO APENAS COM VÁRIOS RESULTADOS COM FETCHALL 
+     $query = '
+        select * from tb_usuarios;
     
-    // ';
+     ';
             
-    // $retorno = $db->exec($query);
-    // echo "$retorno";
+     $retorno = $db->query($query);
+     $lista = $retorno->fetchAll(PDO::FETCH_ASSOC);
+    //     echo '<pre>';
+    //  print_r($lista);
+    //  echo '</pre>';
+
+    foreach($lista as $listas){
+        echo 'Email:' . $listas['email'] . '<br>';
+    }
+
+    //TRABALHANDO APENAS COM UM RESULTADO COM FETCH 
+    $query2 = '
+        select * from tb_usuarios where nome = "Henrique";
+    ';
+
+    $conexao  = $db->query($query2);
+
+    $lista2 = $conexao->fetch(PDO::FETCH_NUM);
+         echo '<br><pre>';
+      print_r($lista2);
+      echo '</pre>';
+
 
 }
 catch(PDOException $e){
