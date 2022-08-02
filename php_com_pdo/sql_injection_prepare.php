@@ -1,7 +1,10 @@
-<?php
-// echo '<pre>';
-// print_r($_POST);
-// echo '</pre>';
+<?php 
+
+
+
+echo '<pre>';
+print_r($_POST);
+echo '</pre>';
 
 $db = new PDO('mysql:server=localhost;dbname=php_com_dbo', 'root', '');
 
@@ -9,22 +12,25 @@ $db = new PDO('mysql:server=localhost;dbname=php_com_dbo', 'root', '');
 /* Dessa forma que está escrito o retorno é possível passar códigos do form pro select 
 Ou seja, existe uma falha de SQL Injection aqui
 */
-$query = 'select * from tb_usuarios where email = "'.$_POST['email'].'" and senha = "'.$_POST['senha'].'";';
+$query = "select * from tb_usuarios";
+$query .= " where email = :email";
+$query .= " and senha = :senha;";
 
 echo $query;
 
-$conexao = $db->query($query);
+$stmt = $db->prepare($query);
 
-$lista = $conexao->fetchAll(PDO::FETCH_ASSOC);
+$stmt -> bindValue(':email', $_POST['email']);
+$stmt -> bindValue(':senha', $_POST['senha'],PDO::PARAM_INT);
 
-echo '<pre>';
+$stmt -> execute();
+
+$lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+echo '<pre> here';
 print_r($lista);
 echo '</pre>';
-
-
-/**Resolvendo problema de sql injection com a cláusula prepare*/
-
-
 
 
 ?>
@@ -40,10 +46,10 @@ echo '</pre>';
 <body>
     <h1>Login</h1>
     <br>
-    <form action='sql_injection.php' method='post'>
+    <form action='sql_injection_prepare.php' method='POST'>
     <input type='email' placeholder='Email' name='email'>
     <br>
-    <input type='password' placeholder='Nome' name='senha'>
+    <input type='password' placeholder='Senha' name='senha'>
     <br>
     <button type='submit'>Enviar Post</button>
     </form>
