@@ -29,4 +29,7 @@ h4 {
 	color: #009933 !important;
 }
 
-
+.alert{
+    align-content: center;
+    width: 20% !important;
+}

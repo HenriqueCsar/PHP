@@ -3,10 +3,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>App Lista Tarefas</title>
-
-		<link rel="stylesheet" href="css/estilo.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/estilo.css">
+
 	</head>
 
 	<body>
@@ -20,15 +20,23 @@
 		</nav>
 		
 		<?if(isset($_GET['include']) && $_GET['include']==1) {?>
-		<div class="bg-success d-flex pt-2 text-light justify-content-center">
-			<h5>Tarefa inserida com sucesso!</h5>
+			<div class="row flex-d justify-content-center pt-2">
+			<div class="alert alert-success col-md-4 col-md-offset-4 fade show text-center text-black justify-content-center">
+			Tarefa inserida com sucesso!
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+	
+  </button>
+  </div>
 		</div>
 		<? }; ?>
 
 				
 		<?if(isset($_GET['include']) && $_GET['include']==0) {?>
-		<div class="bg-danger d-flex pt-2 text-light justify-content-center">
+			<div class="row">
+		<div class="col-md-2 alert alert-warning alert-dismissible fade show">
 			<h5>Falha ao inserir a tarefa!</h5>
+		</div>
 		</div>
 		<? }; ?>
 
@@ -70,4 +78,8 @@
 			</div>
 		</div>
 	</body>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="script.js"></script>
 </html>
