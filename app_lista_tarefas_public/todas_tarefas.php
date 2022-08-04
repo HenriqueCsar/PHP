@@ -43,13 +43,33 @@ require_once('tarefa_controller.php');
 								<hr />
 								<? foreach($recuperar as $tarefas) { ?>
 								<div class="row mb-3 d-flex align-items-center tarefa">
-									<div class="col-sm-9"> <?=$tarefas['tarefa']?>(<?=$tarefas['status']?>)</div>
+									<div class="col-sm-9"> 
+										
+										<p id="C<?=$tarefas['id']?>"><?=$tarefas['tarefa']?>(<?=$tarefas['status']?>)</p>
+										
+										<form method="POST" style="display:none" id="B<?=$tarefas['id']?>" action="tarefa_controller.php?acao=editar&id=<?=$tarefas['id']?>">
+											<input class="form-control" type="text" name="tarefa" value="<?=$tarefas['tarefa']?>" placeholder="Alterar tarefa: <?=$tarefas['tarefa']?>">
+										</form>
+									</div>
 									<div class="col-sm-3 mt-2 d-flex justify-content-between">
 										<a href="tarefa_controller.php?acao=excluir&id=<?=$tarefas['id']?>"><i class="fas fa-trash-alt fa-lg text-danger"></i></a>
-										<a href="tarefa_controller.php?acao=editar&id=<?=$tarefas['id']?>"><i class="fas fa-edit fa-lg text-info"></i></a>
+										<a id="A<?=$tarefas['id']?>" ><i class="fas fa-edit fa-lg text-info"></i></a>
 										<a href="tarefa_controller.php?acao=realizado&id=<?=$tarefas['id']?>"><i class="fas fa-check-square fa-lg text-success"></i></a>
 									</div>
 								</div>
+								<script>
+									document.getElementById("A<?=$tarefas['id']?>").onclick = function () {
+									if (document.getElementById("B<?=$tarefas['id']?>").style.display !== "none") {
+										document.getElementById("B<?=$tarefas['id']?>").style.display = "none";
+										document.getElementById("C<?=$tarefas['id']?>").style.display = "block";
+
+									} else {
+										document.getElementById("B<?=$tarefas['id']?>").style.display = "block";
+										document.getElementById("C<?=$tarefas['id']?>").style.display = "none";
+									}
+									};
+								</script>
+
 								<? } ?>
 								
 							</div>
