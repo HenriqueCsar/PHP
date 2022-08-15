@@ -13,6 +13,10 @@
 
         $lista_frutas = ['Banana', 'Maçã', 'Morango', 'Uva'];
 
+        if (in_array("Banana", $lista_frutas)) { 
+            echo "Existe";
+        }
+
         echo '<pre>';
         print_r($lista_frutas);
         echo '</pre>';
