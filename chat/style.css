@@ -9,14 +9,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
-input[type="file"] {
-    position: absolute;
-    z-index: -1;
-    top: 10px;
-    left: 8px;
-    font-size: 17px;
-    color: #ff0000;
-  }
+input-file{
+    color:red;
+    font-size:30300px;
+}
+
 
 
 body{

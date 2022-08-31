@@ -31,7 +31,7 @@
                         <input name="image" type="file" required>
                     </div>
                     <div class="field button">
-                        <input type="submit" value="Cadastrar conta" hidden>
+                        <input type="submit" value="Cadastrar conta">
                     </div>
                     
             </form>
