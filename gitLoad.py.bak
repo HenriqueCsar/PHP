@@ -1,0 +1,22 @@
+import os, datetime, sys
+
+if(len(sys.argv)>1):
+    date = datetime.datetime.now().strftime('%Y%m%d')
+    print(date)
+
+    gitcommand = f'''
+    git add . & git commit -m "{sys.argv[1]} - Update LAB-PHP V{date}" & git push
+    '''
+    os.system(gitcommand)
+
+else:
+    while(True):
+        date = datetime.datetime.now().strftime('%Y%m%d')
+        print(date)
+
+        gitcommand = f'''
+        git add . & git commit -m "Update LAB-PHP V{date}" & git push
+        '''
+        os.system(gitcommand)
+
+# print(a)
