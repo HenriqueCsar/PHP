@@ -19,8 +19,7 @@ $cursos = $repositorioDeCursos->findAll();
     </div>
 
     <a href="novo-curso" class="btn btn-primary">Novo Curso</a>
-    <br>
-
+    <br><br>
     <ul class="list-group">
         <?php foreach ($cursos as $curso): ?>
             <li class="list-group-item">

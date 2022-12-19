@@ -12,7 +12,7 @@
         <h1>Novo curso</h1>
     </div>
 
-   <form action="">
+   <form action="POST">
         <div class="form-group">
             <label for="descricao" class="descricao"></label>
             <input type="text" class="form-control" id="descricao" name="descricao">

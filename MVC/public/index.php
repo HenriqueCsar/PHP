@@ -1,21 +1,14 @@
 <?php
 
-
-if($_SERVER['PATH_INFO'] === '/listar-cursos'){
-    require 'listar-cursos.php';
-}
-
-
-    switch (isset($_SERVER['PATH_INFO'])){
+    switch ($_SERVER['PATH_INFO']){
         case '/listar-cursos':
             require 'listar-cursos.php';
             break;
 
         case '/novo-curso':
-            require 'novo_curso.php';
+            require 'novo-curso.php';
             break;
-            
+
         default:
-            require 'listar-cursos.php';
-            break;
+            echo 'Error 404';
     }
