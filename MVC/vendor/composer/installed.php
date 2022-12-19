@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'bfad603e9495eece6e1cacb778ece631d28357c3',
+        'reference' => '861a1cfb4114ff8497374d57a48c05d7e3685189',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'bfad603e9495eece6e1cacb778ece631d28357c3',
+            'reference' => '861a1cfb4114ff8497374d57a48c05d7e3685189',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -127,6 +127,12 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'psr/cache-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '2.0|3.0',
+            ),
+        ),
         'psr/container' => array(
             'pretty_version' => '2.0.2',
             'version' => '2.0.2.0',
@@ -149,6 +155,36 @@
             'dev_requirement' => false,
             'provided' => array(
                 0 => '1.0|2.0|3.0',
+            ),
+        ),
+        'psr/simple-cache-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0|2.0|3.0',
+            ),
+        ),
+        'symfony/cache' => array(
+            'pretty_version' => 'v6.2.2',
+            'version' => '6.2.2.0',
+            'reference' => '68625530468c5ff4557fc8825dcfa478b94a8309',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/cache',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/cache-contracts' => array(
+            'pretty_version' => 'v3.2.0',
+            'version' => '3.2.0.0',
+            'reference' => 'e8d1a5fc43534063204b74c080ebe36307d12271',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/cache-contracts',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/cache-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.1|2.0|3.0',
             ),
         ),
         'symfony/console' => array(
@@ -238,6 +274,15 @@
             'reference' => '863219fd713fa41cbcd285a79723f94672faff4d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/string',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/var-exporter' => array(
+            'pretty_version' => 'v6.2.2',
+            'version' => '6.2.2.0',
+            'reference' => 'ada947160cf9444d17d9ac0b2df46c06941b5526',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/var-exporter',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
