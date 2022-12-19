@@ -15,7 +15,7 @@
    <form action="">
         <div class="form-group">
             <label for="descricao" class="descricao"></label>
-
+            <input type="text" class="descricao" id="descricao" name="descricao">
         </div>
 
    </form>
