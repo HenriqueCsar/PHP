@@ -6,6 +6,7 @@
     },
     "require": {
         "doctrine/orm": "^2.13",
-        "symfony/cache": "^6.2"
+        "symfony/cache": "^6.2",
+        "doctrine/annotations": "^1.14"
     }
 }
