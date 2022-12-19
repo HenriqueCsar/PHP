@@ -12,8 +12,13 @@
         <h1>Novo curso</h1>
     </div>
 
-    <a href="novo_curso" class="btn btn-primary">Novo Curso</a>
-    <br>
+   <form action="">
+        <div class="form-group">
+            <label for="descricao" class="descricao"></label>
+
+        </div>
+
+   </form>
 
 
 </div>
