@@ -6,9 +6,18 @@ use Alura\Cursos\Entity\Curso;
 use Alura\Cursos\Infra\EntityManagerCreator;
 
 class ListarCursos{
-    function processaRequisicao(){
+    private $repositorioDeCursos;
+
+    function __construct(){
         $entityManager = (new EntityManagerCreator())->getEntityManager();
-        $repositorioDeCursos = $entityManager->getRepository(Curso::class);
-        $cursos = $repositorioDeCursos->findAll();
+        $this->repositorioDeCursos = $entityManager->getRepository(Curso::class);
     }
+
+    function processaRequisicao(){
+
+        $cursos = $this->repositorioDeCursos->findAll();
+    }
+
+
+
 }
