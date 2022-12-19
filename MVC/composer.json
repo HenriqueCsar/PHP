@@ -5,6 +5,6 @@
         }
     },
     "require": {
-        "doctrine/orm": "*"
+        "doctrine/orm": "^2.13"
     }
 }
