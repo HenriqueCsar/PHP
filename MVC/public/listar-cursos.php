@@ -18,7 +18,7 @@ $cursos = $repositorioDeCursos->findAll();
         <h1>Listar cursos</h1>
     </div>
 
-    <a href="novo_curso" class="btn btn-primary">Novo Curso</a>
+    <a href="novo-curso" class="btn btn-primary">Novo Curso</a>
     <br>
 
     <ul class="list-group">

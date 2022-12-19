@@ -14,6 +14,7 @@ if($_SERVER['PATH_INFO'] === '/listar-cursos'){
         case '/novo-curso':
             require 'novo_curso.php';
             break;
+            
         default:
             require 'listar-cursos.php';
             break;
