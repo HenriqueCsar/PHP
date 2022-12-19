@@ -9,13 +9,13 @@
 <body>
 <div class="container">
     <div class="jumbotron">
-        <h1>Listar cursos</h1>
+        <h1>Novo cursos</h1>
     </div>
 
     <a href="novo_curso" class="btn btn-primary">Novo Curso</a>
     <br>
 
-    
+
 </div>
 </body>
 </html>
