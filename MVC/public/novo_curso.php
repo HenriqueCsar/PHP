@@ -9,7 +9,7 @@
 <body>
 <div class="container">
     <div class="jumbotron">
-        <h1>Novo cursos</h1>
+        <h1>Novo curso</h1>
     </div>
 
     <a href="novo_curso" class="btn btn-primary">Novo Curso</a>
