@@ -9,6 +9,9 @@
             require 'novo-curso.php';
             break;
 
+        case '/save-curso':
+            require '';
+
         default:
             echo 'Error 404';
     }
