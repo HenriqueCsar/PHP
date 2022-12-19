@@ -17,7 +17,7 @@
             <label for="descricao" class="descricao"></label>
             <input type="text" class="form-control" id="descricao" name="descricao">
         </div>
-
+        <button class="btn btn-primary">Salvar</button>
    </form>
 
 
