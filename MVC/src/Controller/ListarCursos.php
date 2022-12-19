@@ -5,7 +5,8 @@ namespace Alura\Cursos\Controller;
 use Alura\Cursos\Entity\Curso;
 use Alura\Cursos\Infra\EntityManagerCreator;
 
-class ListarCursos{
+class ListarCursos implements InterfaceControladorRequisicao
+{
     private $repositorioDeCursos;
 
     function __construct(){
@@ -13,7 +14,7 @@ class ListarCursos{
         $this->repositorioDeCursos = $entityManager->getRepository(Curso::class);
     }
 
-    function processaRequisicao(){
+    public function processaRequisicao(){
 
         $cursos = $this->repositorioDeCursos->findAll();
         ?>
@@ -43,6 +44,7 @@ class ListarCursos{
             </body>
             </html>
         <?php
+        
     }
 
 
