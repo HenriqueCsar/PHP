@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'f5cf02315525df0607582fc2ed2790c1f083316b',
+        'reference' => '4910c90cd42c596793abe1afad987d5cc6625609',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'f5cf02315525df0607582fc2ed2790c1f083316b',
+            'reference' => '4910c90cd42c596793abe1afad987d5cc6625609',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -232,4 +232,14 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'symf
+        'symfony/string' => array(
+            'pretty_version' => 'v6.2.2',
+            'version' => '6.2.2.0',
+            'reference' => '863219fd713fa41cbcd285a79723f94672faff4d',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/string',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);
