@@ -2,4 +2,4 @@
 2. laravel --version
 3. npx create-react-app my-app
 4. composer require laravel/ui
-5. php artisan ui react
+5. php artisan ui react -- Gerar o scaffolding 
